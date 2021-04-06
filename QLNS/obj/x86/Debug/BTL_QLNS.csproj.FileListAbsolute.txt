@@ -1,0 +1,47 @@
+D:\C#\Code_C#\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.DangKy.resources
+D:\C#\Code_C#\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.DangNhap.resources
+D:\C#\Code_C#\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.Properties.Resources.resources
+D:\C#\Code_C#\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.csproj.GenerateResource.Cache
+D:\C#\Code_C#\BTL_QLNS\BTL_QLNS\bin\Debug\BTL_QLNS.exe
+D:\C#\Code_C#\BTL_QLNS\BTL_QLNS\bin\Debug\BTL_QLNS.pdb
+D:\C#\Code_C#\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.exe
+D:\C#\Code_C#\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.pdb
+D:\C#\Code_C#\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.ManHinhChinh.resources
+D:\C#\Code_C#\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.Quanlyduan.resources
+D:\C#\Code_C#\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.Quanlynhanvien.resources
+D:\C#\Code_C#\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.Quanlyphongban.resources
+D:\C#\Code_C#\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.csprojResolveAssemblyReference.cache
+D:\C#\Code_C#\BTL_QLNS\BTL_QLNS\bin\Debug\BTL_QLNS.exe.config
+D:\C#\BTL\Nhom11\BTL_QLNS\BTL_QLNS\bin\Debug\BTL_QLNS.exe.config
+D:\C#\BTL\Nhom11\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.exe
+D:\C#\BTL\Nhom11\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.pdb
+D:\Downloads\Nhom11\BTL_QLNS\BTL_QLNS\bin\Debug\BTL_QLNS.exe.config
+D:\Downloads\Nhom11\BTL_QLNS\BTL_QLNS\bin\Debug\BTL_QLNS.exe
+D:\Downloads\Nhom11\BTL_QLNS\BTL_QLNS\bin\Debug\BTL_QLNS.pdb
+D:\Downloads\Nhom11\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.csprojAssemblyReference.cache
+D:\Downloads\Nhom11\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.DangKy.resources
+D:\Downloads\Nhom11\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.DangNhap.resources
+D:\Downloads\Nhom11\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.ManHinhChinh.resources
+D:\Downloads\Nhom11\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.Properties.Resources.resources
+D:\Downloads\Nhom11\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.Quanlyduan.resources
+D:\Downloads\Nhom11\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.Quanlynhanvien.resources
+D:\Downloads\Nhom11\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.Quanlyphongban.resources
+D:\Downloads\Nhom11\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.csproj.GenerateResource.cache
+D:\Downloads\Nhom11\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.csproj.CoreCompileInputs.cache
+D:\Downloads\Nhom11\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.exe
+D:\Downloads\Nhom11\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.pdb
+E:\[Application] Đồ án\Bảo Mật Thông Tin\Bảo Mật Thông Tin\BTL_QLNS\BTL_QLNS\bin\Debug\BTL_QLNS.exe.config
+E:\[Application] Đồ án\Bảo Mật Thông Tin\Bảo Mật Thông Tin\BTL_QLNS\BTL_QLNS\bin\Debug\BTL_QLNS.exe
+E:\[Application] Đồ án\Bảo Mật Thông Tin\Bảo Mật Thông Tin\BTL_QLNS\BTL_QLNS\bin\Debug\BTL_QLNS.pdb
+E:\[Application] Đồ án\Bảo Mật Thông Tin\Bảo Mật Thông Tin\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.csprojAssemblyReference.cache
+E:\[Application] Đồ án\Bảo Mật Thông Tin\Bảo Mật Thông Tin\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.DangKy.resources
+E:\[Application] Đồ án\Bảo Mật Thông Tin\Bảo Mật Thông Tin\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.DangNhap.resources
+E:\[Application] Đồ án\Bảo Mật Thông Tin\Bảo Mật Thông Tin\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.ManHinhChinh.resources
+E:\[Application] Đồ án\Bảo Mật Thông Tin\Bảo Mật Thông Tin\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.Properties.Resources.resources
+E:\[Application] Đồ án\Bảo Mật Thông Tin\Bảo Mật Thông Tin\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.Quanlyduan.resources
+E:\[Application] Đồ án\Bảo Mật Thông Tin\Bảo Mật Thông Tin\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.Quanlynhanvien.resources
+E:\[Application] Đồ án\Bảo Mật Thông Tin\Bảo Mật Thông Tin\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.Quanlyphongban.resources
+E:\[Application] Đồ án\Bảo Mật Thông Tin\Bảo Mật Thông Tin\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.csproj.GenerateResource.cache
+E:\[Application] Đồ án\Bảo Mật Thông Tin\Bảo Mật Thông Tin\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.csproj.CoreCompileInputs.cache
+E:\[Application] Đồ án\Bảo Mật Thông Tin\Bảo Mật Thông Tin\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.exe
+E:\[Application] Đồ án\Bảo Mật Thông Tin\Bảo Mật Thông Tin\BTL_QLNS\BTL_QLNS\obj\x86\Debug\BTL_QLNS.pdb
