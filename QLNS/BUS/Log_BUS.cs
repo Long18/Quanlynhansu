@@ -14,7 +14,7 @@ namespace QuanLyNhanSu.BUS
         public DataTable getLog()
         {
             DataTable da = null;
-            String sql = "Select * from Log ";
+            String sql = "Select * from CHECKLOG ";
             da = dt.getTable(sql);
             return da;
         }
@@ -22,7 +22,7 @@ namespace QuanLyNhanSu.BUS
         public DataTable delLog()
         {
             DataTable da = null;
-            String sql = "Delete from Log ";
+            String sql = "Delete from CHECKLOG ";
             da = dt.getTable(sql);
             return da;
         }

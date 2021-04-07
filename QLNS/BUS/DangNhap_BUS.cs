@@ -36,10 +36,10 @@ namespace QuanLyNhanSu.BUS
             }
         }
 
-        public void updateTK(String user, String pass, String id, String chucvu, bool checklog)
+        public void updateTK(String user, String pass, String id, String chucvu, String checklog)
         {
             String sql = "UPDATE DANGNHAP set password=N'" + pass + "',id_Nv='" + id + "',chucvu='" +chucvu +"'" +
-                ",checklog= '" + checklog + "'" + "' where username='" + user + "'";
+                ",checklog='" + checklog + "'" + "' where username='" + user + "'";
             try
             {
                 dt.ExcuteNonQuery(sql);

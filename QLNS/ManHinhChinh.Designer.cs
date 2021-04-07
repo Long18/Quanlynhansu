@@ -35,6 +35,11 @@
 			this.btnExit = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
+			this.lbtaikhoan = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.lbTime = new System.Windows.Forms.Label();
+			this.lbContent = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// btnNhanVien
@@ -109,12 +114,62 @@
 			this.button1.Visible = false;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
+			// lbtaikhoan
+			// 
+			this.lbtaikhoan.AutoSize = true;
+			this.lbtaikhoan.Location = new System.Drawing.Point(380, 230);
+			this.lbtaikhoan.Name = "lbtaikhoan";
+			this.lbtaikhoan.Size = new System.Drawing.Size(0, 25);
+			this.lbtaikhoan.TabIndex = 10;
+			this.lbtaikhoan.Visible = false;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(388, 238);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(0, 25);
+			this.label2.TabIndex = 11;
+			this.label2.Visible = false;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(396, 246);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(0, 25);
+			this.label3.TabIndex = 12;
+			this.label3.Visible = false;
+			// 
+			// lbTime
+			// 
+			this.lbTime.AutoSize = true;
+			this.lbTime.Location = new System.Drawing.Point(356, 230);
+			this.lbTime.Name = "lbTime";
+			this.lbTime.Size = new System.Drawing.Size(0, 25);
+			this.lbTime.TabIndex = 13;
+			this.lbTime.Visible = false;
+			// 
+			// lbContent
+			// 
+			this.lbContent.AutoSize = true;
+			this.lbContent.Location = new System.Drawing.Point(-34, 230);
+			this.lbContent.Name = "lbContent";
+			this.lbContent.Size = new System.Drawing.Size(0, 25);
+			this.lbContent.TabIndex = 14;
+			this.lbContent.Visible = false;
+			// 
 			// ManHinhChinh
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.ClientSize = new System.Drawing.Size(760, 484);
+			this.Controls.Add(this.lbContent);
+			this.Controls.Add(this.lbTime);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.lbtaikhoan);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.btnExit);
@@ -140,5 +195,10 @@
         private System.Windows.Forms.Button btnExit;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Label lbtaikhoan;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label lbTime;
+		private System.Windows.Forms.Label lbContent;
 	}
 }

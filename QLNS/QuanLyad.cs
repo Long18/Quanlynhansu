@@ -1,4 +1,5 @@
 ﻿using QuanLyNhanSu.BUS;
+using QuanLyNhanSu.Entity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,8 +16,13 @@ namespace QuanLyNhanSu
 		public QuanLyad()
 		{
 			InitializeComponent();
+			/*if (ckbYes.Checked)
+			{
+
+			}*/
 		}
 
+		Modellll db = new Modellll();
 		public static bool checklog = false;
 
 		DangNhap_BUS dab = new DangNhap_BUS();
@@ -61,26 +67,48 @@ namespace QuanLyNhanSu
 
 		private void btnSua_Click(object sender, EventArgs e)
 		{
-			bool log;
+			String log;
 			StringBuilder s = new StringBuilder(txtmatkhau.Text);
 			string key = "daylachuoimahoa";
 			vegeMahoa(ref s, key);
 			txtmatkhau.Text = Convert.ToString(s);
 
-			if(ckbYes.Checked == true)
+			try
 			{
-				log = true;
-			}
-			else
-			{
-				log = false;
-			}
+				DANGNHAP capquyenn = new DANGNHAP();
 
-			if (txtuser.Text.Trim() == "")
-				MessageBox.Show("Tài khoản không được để trống !");
-			else if (txtmatkhau.Text.Trim() == "")
-				MessageBox.Show("Mật khẩu không được để trống !");
-			else
+				if (txtuser.Text.Trim() == "")
+					MessageBox.Show("Tài khoản không được để trống !");
+				else if (txtmatkhau.Text.Trim() == "")
+					MessageBox.Show("Mật khẩu không được để trống !");
+
+				if (ckbYes.Checked == true)
+				{
+					//log = "bat";
+					capquyenn.LichSu = "bat";
+				}
+				else
+				{
+					//log = "tat";
+					capquyenn.LichSu = "tat";
+				}
+
+				capquyenn.username = txtuser.Text.Trim();
+				capquyenn.password = txtmatkhau.Text.Trim();
+				capquyenn.id_Nv = txtSoNV.Text.Trim();
+				capquyenn.chucvu = txtchucvu.Text.Trim();
+
+				db.Entry(capquyenn).State = System.Data.Entity.EntityState.Modified;
+				//db.DANGNHAP.(capquyenn);
+				db.SaveChanges();
+
+			}
+			catch (FormatException ex)
+			{
+				MessageBox.Show("Số nhân viên phải là kiểu số nguyên !" + ex.Message);
+			}
+			
+			/*else
 			{
 				try
 				{
@@ -90,7 +118,7 @@ namespace QuanLyNhanSu
 				{
 					MessageBox.Show("Số nhân viên phải là kiểu số nguyên !" + ex.Message);
 				}
-			}
+			}*/
 			QuanLy_Load(sender, e);
 		}
 
@@ -103,7 +131,7 @@ namespace QuanLyNhanSu
 				txtmatkhau.Text = dgvLogin.Rows[index].Cells[1].Value.ToString();
 				txtSoNV.Text = dgvLogin.Rows[index].Cells[2].Value.ToString();
 				txtchucvu.Text = dgvLogin.Rows[index].Cells[3].Value.ToString();
-				if (dgvLogin.Rows[index].Cells[4].Value.ToString() == "True")
+				if (dgvLogin.Rows[index].Cells[4].Value.ToString() == "bat")
 				{
 					ckbYes.Checked = true;
 					ckbNo.Checked = false;

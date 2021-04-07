@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyNhanSu.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,7 @@ namespace QuanLyNhanSu
 {
     public partial class ManHinhChinh : Form
     {
+        Modellll db = new Modellll();
         public ManHinhChinh()
         {
             InitializeComponent();
@@ -44,6 +46,24 @@ namespace QuanLyNhanSu
             Quanlyduan frmda = new Quanlyduan();
             frmda.Show();
             this.Hide();
+
+            if (DangNhap.capquyen == true)
+            {
+                lbContent.Text = "Người dùng: " + DangNhap.user + ", vừa mới vào: " + btnDuan.Text;
+                lbtaikhoan.Text = DangNhap.user;
+                DateTime time = DateTime.Now;
+                lbTime.Text = time.ToString("dd/MM/yyyy, HH:mm:ss");
+
+
+                CHECKLOG log = new CHECKLOG();
+
+                log.Ngay = lbTime.Text.Trim();
+                log.Noidung = lbContent.Text.Trim();
+
+                db.CHECKLOG.Add(log);
+                db.SaveChanges();
+            }
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)

@@ -10,14 +10,16 @@ using System.Data.SqlClient;
 using System.Data.Entity;
 
 using QuanLyNhanSu.BUS;
+using QuanLyNhanSu.Entity;
 
 namespace QuanLyNhanSu
 {
     public partial class DangNhap : Form
     {
-        public static bool phanquyen = false;
+        public static bool phanquyen, capquyen = false;
+        public static String user = "";
 
-
+        Modellll db = new Modellll();
         public DangNhap()
         {
             InitializeComponent();
@@ -48,7 +50,7 @@ namespace QuanLyNhanSu
         User_BUS ub = new User_BUS();
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
-            String condition, id, taikhoan, matkhau;
+            String condition, id,lichsu , taikhoan, matkhau;
 
             StringBuilder s = new StringBuilder(txtPassword.Text);
             string key = "daylachuoimahoa";
@@ -60,17 +62,21 @@ namespace QuanLyNhanSu
 
             id = "chucvu LIKE '%ad%' AND username ='" + taikhoan + "'";
             condition = " username ='" + taikhoan + "' AND password ='" + matkhau + "'";
+            lichsu = " LichSu='" + "bat" + "'";
 
             DataTable dt = new DataTable();
             DataTable dt1 = new DataTable();
+            DataTable dt2 = new DataTable();
 
             try
             {
+                dt2 = ub.lichsu(lichsu);
                 dt1 = ub.phanquyen(id);
                 dt = ub.getUser(condition);
-                if (dt.Rows.Count > 0 && dt1.Rows.Count > 0)
+                if (dt.Rows.Count > 0 && dt1.Rows.Count > 0 && dt2.Rows.Count > 0)
                 {
                     phanquyen = true;
+                    capquyen = true;
                     MessageBox.Show("Đăng nhập thành công !" + "\nAdmin Login!!");
                     ManHinhChinh frmmhc = new ManHinhChinh();
                     frmmhc.FormClosed += new FormClosedEventHandler(frmmhc_Closed);
@@ -102,22 +108,23 @@ namespace QuanLyNhanSu
                 MessageBox.Show("Lỗi kết nối CSDL !");
             }
 
-            lbContent.Text = "Người dùng:" + txtUsername.Text + ",vừa mới:" + btnDangnhap.Text  ;
+            lbContent.Text = "Người dùng: " + txtUsername.Text + ", vừa mới: " + btnDangnhap.Text  ;
             lbtaikhoan.Text = txtUsername.Text;
+            lbtaikhoan.Text = user;
             DateTime time = DateTime.Now;
-            lbTime.Text = time.ToString("dd/MM/yyyy");
-
-            
-           /* Log log = new Log();*/
-
-            //log.Date = lbTime.Text.Trim();
-            //log.Content = lbContent.Text.Trim();
-
-            
-            /*db.SaveChanges();*/
+            lbTime.Text = time.ToString("dd/MM/yyyy, HH:mm:ss");
 
 
-        }
+			CHECKLOG log = new CHECKLOG();
+
+			log.Ngay = lbTime.Text.Trim();
+			log.Noidung = lbContent.Text.Trim();
+
+            db.CHECKLOG.Add(log);
+			db.SaveChanges();
+
+
+		}
 
         private void btnDangky_Click(object sender, EventArgs e)
         {

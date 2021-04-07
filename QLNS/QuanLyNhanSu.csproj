@@ -104,6 +104,13 @@
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entity\CHECKLOG.cs" />
+    <Compile Include="Entity\DANGNHAP.cs" />
+    <Compile Include="Entity\DUAN.cs" />
+    <Compile Include="Entity\Modellll.cs" />
+    <Compile Include="Entity\NHANVIEN.cs" />
+    <Compile Include="Entity\PHONGBAN.cs" />
+    <Compile Include="Entity\sysdiagrams.cs" />
     <Compile Include="ManHinhChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,9 +272,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entity\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

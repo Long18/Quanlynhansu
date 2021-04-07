@@ -32,7 +32,7 @@ namespace QuanLyNhanSu {
         
         private DANGNHAPDataTable tableDANGNHAP;
         
-        private LogDataTable tableLog;
+        private CHECKLOGDataTable tableCHECKLOG;
         
         private global::System.Data.DataRelation relationFK_NHANVIEN_DUAN;
         
@@ -80,8 +80,8 @@ namespace QuanLyNhanSu {
                 if ((ds.Tables["DANGNHAP"] != null)) {
                     base.Tables.Add(new DANGNHAPDataTable(ds.Tables["DANGNHAP"]));
                 }
-                if ((ds.Tables["Log"] != null)) {
-                    base.Tables.Add(new LogDataTable(ds.Tables["Log"]));
+                if ((ds.Tables["CHECKLOG"] != null)) {
+                    base.Tables.Add(new CHECKLOGDataTable(ds.Tables["CHECKLOG"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -145,9 +145,9 @@ namespace QuanLyNhanSu {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public LogDataTable Log {
+        public CHECKLOGDataTable CHECKLOG {
             get {
-                return this.tableLog;
+                return this.tableCHECKLOG;
             }
         }
         
@@ -230,8 +230,8 @@ namespace QuanLyNhanSu {
                 if ((ds.Tables["DANGNHAP"] != null)) {
                     base.Tables.Add(new DANGNHAPDataTable(ds.Tables["DANGNHAP"]));
                 }
-                if ((ds.Tables["Log"] != null)) {
-                    base.Tables.Add(new LogDataTable(ds.Tables["Log"]));
+                if ((ds.Tables["CHECKLOG"] != null)) {
+                    base.Tables.Add(new CHECKLOGDataTable(ds.Tables["CHECKLOG"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -290,10 +290,10 @@ namespace QuanLyNhanSu {
                     this.tableDANGNHAP.InitVars();
                 }
             }
-            this.tableLog = ((LogDataTable)(base.Tables["Log"]));
+            this.tableCHECKLOG = ((CHECKLOGDataTable)(base.Tables["CHECKLOG"]));
             if ((initTable == true)) {
-                if ((this.tableLog != null)) {
-                    this.tableLog.InitVars();
+                if ((this.tableCHECKLOG != null)) {
+                    this.tableCHECKLOG.InitVars();
                 }
             }
             this.relationFK_NHANVIEN_DUAN = this.Relations["FK_NHANVIEN_DUAN"];
@@ -317,8 +317,8 @@ namespace QuanLyNhanSu {
             base.Tables.Add(this.tableNHANVIEN);
             this.tableDANGNHAP = new DANGNHAPDataTable();
             base.Tables.Add(this.tableDANGNHAP);
-            this.tableLog = new LogDataTable();
-            base.Tables.Add(this.tableLog);
+            this.tableCHECKLOG = new CHECKLOGDataTable();
+            base.Tables.Add(this.tableCHECKLOG);
             this.relationFK_NHANVIEN_DUAN = new global::System.Data.DataRelation("FK_NHANVIEN_DUAN", new global::System.Data.DataColumn[] {
                         this.tableDUAN.id_DaColumn}, new global::System.Data.DataColumn[] {
                         this.tableNHANVIEN.id_DaColumn}, false);
@@ -359,7 +359,7 @@ namespace QuanLyNhanSu {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeLog() {
+        private bool ShouldSerializeCHECKLOG() {
             return false;
         }
         
@@ -431,7 +431,7 @@ namespace QuanLyNhanSu {
         public delegate void DANGNHAPRowChangeEventHandler(object sender, DANGNHAPRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void LogRowChangeEventHandler(object sender, LogRowChangeEvent e);
+        public delegate void CHECKLOGRowChangeEventHandler(object sender, CHECKLOGRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1731,18 +1731,16 @@ namespace QuanLyNhanSu {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class LogDataTable : global::System.Data.TypedTableBase<LogRow> {
-            
-            private global::System.Data.DataColumn columnStt;
-            
-            private global::System.Data.DataColumn columnDate;
+        public partial class CHECKLOGDataTable : global::System.Data.TypedTableBase<CHECKLOGRow> {
             
             private global::System.Data.DataColumn columnContent;
             
+            private global::System.Data.DataColumn columnDate;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LogDataTable() {
-                this.TableName = "Log";
+            public CHECKLOGDataTable() {
+                this.TableName = "CHECKLOG";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1750,7 +1748,7 @@ namespace QuanLyNhanSu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal LogDataTable(global::System.Data.DataTable table) {
+            internal CHECKLOGDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1767,16 +1765,16 @@ namespace QuanLyNhanSu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected LogDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected CHECKLOGDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn SttColumn {
+            public global::System.Data.DataColumn ContentColumn {
                 get {
-                    return this.columnStt;
+                    return this.columnContent;
                 }
             }
             
@@ -1785,14 +1783,6 @@ namespace QuanLyNhanSu {
             public global::System.Data.DataColumn DateColumn {
                 get {
                     return this.columnDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ContentColumn {
-                get {
-                    return this.columnContent;
                 }
             }
             
@@ -1807,54 +1797,46 @@ namespace QuanLyNhanSu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LogRow this[int index] {
+            public CHECKLOGRow this[int index] {
                 get {
-                    return ((LogRow)(this.Rows[index]));
+                    return ((CHECKLOGRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event LogRowChangeEventHandler LogRowChanging;
+            public event CHECKLOGRowChangeEventHandler CHECKLOGRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event LogRowChangeEventHandler LogRowChanged;
+            public event CHECKLOGRowChangeEventHandler CHECKLOGRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event LogRowChangeEventHandler LogRowDeleting;
+            public event CHECKLOGRowChangeEventHandler CHECKLOGRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event LogRowChangeEventHandler LogRowDeleted;
+            public event CHECKLOGRowChangeEventHandler CHECKLOGRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddLogRow(LogRow row) {
+            public void AddCHECKLOGRow(CHECKLOGRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LogRow AddLogRow(int Stt, System.DateTime Date, string Content) {
-                LogRow rowLogRow = ((LogRow)(this.NewRow()));
+            public CHECKLOGRow AddCHECKLOGRow(string Content, string Date) {
+                CHECKLOGRow rowCHECKLOGRow = ((CHECKLOGRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Stt,
-                        Date,
-                        Content};
-                rowLogRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowLogRow);
-                return rowLogRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LogRow FindByStt(int Stt) {
-                return ((LogRow)(this.Rows.Find(new object[] {
-                            Stt})));
+                        Content,
+                        Date};
+                rowCHECKLOGRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCHECKLOGRow);
+                return rowCHECKLOGRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                LogDataTable cln = ((LogDataTable)(base.Clone()));
+                CHECKLOGDataTable cln = ((CHECKLOGDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1862,59 +1844,51 @@ namespace QuanLyNhanSu {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new LogDataTable();
+                return new CHECKLOGDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnStt = base.Columns["Stt"];
-                this.columnDate = base.Columns["Date"];
                 this.columnContent = base.Columns["Content"];
+                this.columnDate = base.Columns["Date"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnStt = new global::System.Data.DataColumn("Stt", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStt);
-                this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDate);
                 this.columnContent = new global::System.Data.DataColumn("Content", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnContent);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnStt}, true));
-                this.columnStt.AllowDBNull = false;
-                this.columnStt.Unique = true;
-                this.columnDate.AllowDBNull = false;
-                this.columnContent.AllowDBNull = false;
-                this.columnContent.MaxLength = 50;
+                this.columnDate = new global::System.Data.DataColumn("Date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDate);
+                this.columnContent.MaxLength = 2147483647;
+                this.columnDate.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LogRow NewLogRow() {
-                return ((LogRow)(this.NewRow()));
+            public CHECKLOGRow NewCHECKLOGRow() {
+                return ((CHECKLOGRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new LogRow(builder);
+                return new CHECKLOGRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(LogRow);
+                return typeof(CHECKLOGRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.LogRowChanged != null)) {
-                    this.LogRowChanged(this, new LogRowChangeEvent(((LogRow)(e.Row)), e.Action));
+                if ((this.CHECKLOGRowChanged != null)) {
+                    this.CHECKLOGRowChanged(this, new CHECKLOGRowChangeEvent(((CHECKLOGRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1922,8 +1896,8 @@ namespace QuanLyNhanSu {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.LogRowChanging != null)) {
-                    this.LogRowChanging(this, new LogRowChangeEvent(((LogRow)(e.Row)), e.Action));
+                if ((this.CHECKLOGRowChanging != null)) {
+                    this.CHECKLOGRowChanging(this, new CHECKLOGRowChangeEvent(((CHECKLOGRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1931,8 +1905,8 @@ namespace QuanLyNhanSu {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.LogRowDeleted != null)) {
-                    this.LogRowDeleted(this, new LogRowChangeEvent(((LogRow)(e.Row)), e.Action));
+                if ((this.CHECKLOGRowDeleted != null)) {
+                    this.CHECKLOGRowDeleted(this, new CHECKLOGRowChangeEvent(((CHECKLOGRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1940,14 +1914,14 @@ namespace QuanLyNhanSu {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.LogRowDeleting != null)) {
-                    this.LogRowDeleting(this, new LogRowChangeEvent(((LogRow)(e.Row)), e.Action));
+                if ((this.CHECKLOGRowDeleting != null)) {
+                    this.CHECKLOGRowDeleting(this, new CHECKLOGRowChangeEvent(((CHECKLOGRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveLogRow(LogRow row) {
+            public void RemoveCHECKLOGRow(CHECKLOGRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1974,7 +1948,7 @@ namespace QuanLyNhanSu {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "LogDataTable";
+                attribute2.FixedValue = "CHECKLOGDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2415,48 +2389,71 @@ namespace QuanLyNhanSu {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class LogRow : global::System.Data.DataRow {
+        public partial class CHECKLOGRow : global::System.Data.DataRow {
             
-            private LogDataTable tableLog;
+            private CHECKLOGDataTable tableCHECKLOG;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal LogRow(global::System.Data.DataRowBuilder rb) : 
+            internal CHECKLOGRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableLog = ((LogDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Stt {
-                get {
-                    return ((int)(this[this.tableLog.SttColumn]));
-                }
-                set {
-                    this[this.tableLog.SttColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Date {
-                get {
-                    return ((global::System.DateTime)(this[this.tableLog.DateColumn]));
-                }
-                set {
-                    this[this.tableLog.DateColumn] = value;
-                }
+                this.tableCHECKLOG = ((CHECKLOGDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Content {
                 get {
-                    return ((string)(this[this.tableLog.ContentColumn]));
+                    try {
+                        return ((string)(this[this.tableCHECKLOG.ContentColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Content\' in table \'CHECKLOG\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableLog.ContentColumn] = value;
+                    this[this.tableCHECKLOG.ContentColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Date {
+                get {
+                    try {
+                        return ((string)(this[this.tableCHECKLOG.DateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Date\' in table \'CHECKLOG\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCHECKLOG.DateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsContentNull() {
+                return this.IsNull(this.tableCHECKLOG.ContentColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetContentNull() {
+                this[this.tableCHECKLOG.ContentColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDateNull() {
+                return this.IsNull(this.tableCHECKLOG.DateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDateNull() {
+                this[this.tableCHECKLOG.DateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2600,22 +2597,22 @@ namespace QuanLyNhanSu {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class LogRowChangeEvent : global::System.EventArgs {
+        public class CHECKLOGRowChangeEvent : global::System.EventArgs {
             
-            private LogRow eventRow;
+            private CHECKLOGRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LogRowChangeEvent(LogRow row, global::System.Data.DataRowAction action) {
+            public CHECKLOGRowChangeEvent(CHECKLOGRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LogRow Row {
+            public CHECKLOGRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4289,7 +4286,7 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class LogTableAdapter : global::System.ComponentModel.Component {
+    public partial class CHECKLOGTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4303,7 +4300,7 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public LogTableAdapter() {
+        public CHECKLOGTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4400,39 +4397,16 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Log";
-            tableMapping.ColumnMappings.Add("Stt", "Stt");
-            tableMapping.ColumnMappings.Add("Date", "Date");
+            tableMapping.DataSetTable = "CHECKLOG";
             tableMapping.ColumnMappings.Add("Content", "Content");
+            tableMapping.ColumnMappings.Add("Date", "Date");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Log] WHERE (([Stt] = @Original_Stt) AND ([Date] = @Original_Da" +
-                "te) AND ([Content] = @Original_Content))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Stt", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Stt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Content", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Content", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Log] ([Stt], [Date], [Content]) VALUES (@Stt, @Date, @Content)" +
-                ";\r\nSELECT Stt, Date, [Content] FROM [Log] WHERE (Stt = @Stt)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[CHECKLOG] ([Content], [Date]) VALUES (@Content, @Date)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Stt", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Stt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Content", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Content", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Log] SET [Stt] = @Stt, [Date] = @Date, [Content] = @Content WHERE (" +
-                "([Stt] = @Original_Stt) AND ([Date] = @Original_Date) AND ([Content] = @Original" +
-                "_Content));\r\nSELECT Stt, Date, [Content] FROM [Log] WHERE (Stt = @Stt)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Stt", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Stt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Content", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Content", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Stt", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Stt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Content", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Content", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4448,7 +4422,7 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Stt, Date, Content FROM dbo.[Log]";
+            this._commandCollection[0].CommandText = "SELECT Content, Date FROM dbo.CHECKLOG";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4456,7 +4430,7 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QLNS.LogDataTable dataTable) {
+        public virtual int Fill(QLNS.CHECKLOGDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4469,9 +4443,9 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QLNS.LogDataTable GetData() {
+        public virtual QLNS.CHECKLOGDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QLNS.LogDataTable dataTable = new QLNS.LogDataTable();
+            QLNS.CHECKLOGDataTable dataTable = new QLNS.CHECKLOGDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4479,7 +4453,7 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QLNS.LogDataTable dataTable) {
+        public virtual int Update(QLNS.CHECKLOGDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -4487,7 +4461,7 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(QLNS dataSet) {
-            return this.Adapter.Update(dataSet, "Log");
+            return this.Adapter.Update(dataSet, "CHECKLOG");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4508,44 +4482,19 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Stt, System.DateTime Original_Date, string Original_Content) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Stt));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_Date));
-            if ((Original_Content == null)) {
-                throw new global::System.ArgumentNullException("Original_Content");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Content));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Stt, System.DateTime Date, string Content) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Stt));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(Date));
+        public virtual int Insert(string Content, string Date) {
             if ((Content == null)) {
-                throw new global::System.ArgumentNullException("Content");
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Content));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Content));
+            }
+            if ((Date == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Date));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4561,51 +4510,6 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
                     this.Adapter.InsertCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Stt, System.DateTime Date, string Content, int Original_Stt, System.DateTime Original_Date, string Original_Content) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Stt));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(Date));
-            if ((Content == null)) {
-                throw new global::System.ArgumentNullException("Content");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Content));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Stt));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(Original_Date));
-            if ((Original_Content == null)) {
-                throw new global::System.ArgumentNullException("Original_Content");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Content));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime Date, string Content, int Original_Stt, System.DateTime Original_Date, string Original_Content) {
-            return this.Update(Original_Stt, Date, Content, Original_Stt, Original_Date, Original_Content);
         }
     }
     
@@ -4629,7 +4533,7 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
         
         private DANGNHAPTableAdapter _dANGNHAPTableAdapter;
         
-        private LogTableAdapter _logTableAdapter;
+        private CHECKLOGTableAdapter _cHECKLOGTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -4707,12 +4611,12 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public LogTableAdapter LogTableAdapter {
+        public CHECKLOGTableAdapter CHECKLOGTableAdapter {
             get {
-                return this._logTableAdapter;
+                return this._cHECKLOGTableAdapter;
             }
             set {
-                this._logTableAdapter = value;
+                this._cHECKLOGTableAdapter = value;
             }
         }
         
@@ -4751,9 +4655,9 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
                             && (this._dANGNHAPTableAdapter.Connection != null))) {
                     return this._dANGNHAPTableAdapter.Connection;
                 }
-                if (((this._logTableAdapter != null) 
-                            && (this._logTableAdapter.Connection != null))) {
-                    return this._logTableAdapter.Connection;
+                if (((this._cHECKLOGTableAdapter != null) 
+                            && (this._cHECKLOGTableAdapter.Connection != null))) {
+                    return this._cHECKLOGTableAdapter.Connection;
                 }
                 return null;
             }
@@ -4780,7 +4684,7 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
                 if ((this._dANGNHAPTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._logTableAdapter != null)) {
+                if ((this._cHECKLOGTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -4830,12 +4734,12 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._logTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Log.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._cHECKLOGTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CHECKLOG.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._logTableAdapter.Update(updatedRows));
+                    result = (result + this._cHECKLOGTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -4881,11 +4785,11 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._logTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Log.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._cHECKLOGTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CHECKLOG.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._logTableAdapter.Update(addedRows));
+                    result = (result + this._cHECKLOGTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -4899,11 +4803,11 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(QLNS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._logTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Log.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._cHECKLOGTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CHECKLOG.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._logTableAdapter.Update(deletedRows));
+                    result = (result + this._cHECKLOGTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -4998,8 +4902,8 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._logTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._logTableAdapter.Connection) == false))) {
+            if (((this._cHECKLOGTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._cHECKLOGTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -5071,13 +4975,13 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
                         adaptersWithAcceptChangesDuringUpdate.Add(this._dANGNHAPTableAdapter.Adapter);
                     }
                 }
-                if ((this._logTableAdapter != null)) {
-                    revertConnections.Add(this._logTableAdapter, this._logTableAdapter.Connection);
-                    this._logTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._logTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._logTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._logTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._logTableAdapter.Adapter);
+                if ((this._cHECKLOGTableAdapter != null)) {
+                    revertConnections.Add(this._cHECKLOGTableAdapter, this._cHECKLOGTableAdapter.Connection);
+                    this._cHECKLOGTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._cHECKLOGTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._cHECKLOGTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._cHECKLOGTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._cHECKLOGTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -5154,9 +5058,9 @@ SELECT username, password, id_Nv, checklog, chucvu FROM DANGNHAP WHERE (username
                     this._dANGNHAPTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._dANGNHAPTableAdapter]));
                     this._dANGNHAPTableAdapter.Transaction = null;
                 }
-                if ((this._logTableAdapter != null)) {
-                    this._logTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._logTableAdapter]));
-                    this._logTableAdapter.Transaction = null;
+                if ((this._cHECKLOGTableAdapter != null)) {
+                    this._cHECKLOGTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._cHECKLOGTableAdapter]));
+                    this._cHECKLOGTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

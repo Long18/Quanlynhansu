@@ -28,6 +28,14 @@ namespace QuanLyNhanSu.BUS
             return datb;
         }
 
+        public DataTable lichsu(String ls)
+        {
+            DataTable datb = null;
+            String sql = "Select * from DANGNHAP where " + ls;
+            datb = da.getTable(sql);
+            return datb;
+        }
+
 
         public void insertUser(String username, String pass, String manv,String chucvu)
         {

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using QuanLyNhanSu.BUS;
+using QuanLyNhanSu.Entity;
+
 namespace QuanLyNhanSu
 {
     public partial class Quanlyduan : Form
@@ -16,6 +18,7 @@ namespace QuanLyNhanSu
             InitializeComponent();
         }
         DuAn_BUS dab = new DuAn_BUS();
+        Modellll db = new Modellll();
         private void btnExit_Click(object sender, EventArgs e)
         {
             ManHinhChinh frmmch = new ManHinhChinh();
@@ -38,6 +41,20 @@ namespace QuanLyNhanSu
         private void btnSearch_Click(object sender, EventArgs e)
         {
             dgvDuAn.DataSource=dab.Search(txtSearch.Text);
+
+            lbContent.Text = "Người dùng: " + DangNhap.user + ", vừa mới: " + btnSearch.Text;
+            lbtaikhoan.Text = DangNhap.user;
+            DateTime time = DateTime.Now;
+            lbTime.Text = time.ToString("dd/MM/yyyy, HH:mm:ss");
+
+
+            CHECKLOG log = new CHECKLOG();
+
+            log.Ngay = lbTime.Text.Trim();
+            log.Noidung = lbContent.Text.Trim();
+
+            db.CHECKLOG.Add(log);
+            db.SaveChanges();
         }
 
         private void btnthem_Click(object sender, EventArgs e)
@@ -50,6 +67,25 @@ namespace QuanLyNhanSu
             else
                 dab.insertDA(txtMaDA.Text, txtTenDA.Text, sonv, txtMotaDA.Text);
             Quanlyduan_Load(sender, e);
+
+            if (DangNhap.capquyen == true)
+            {
+
+                lbContent.Text = "Người dùng: " + DangNhap.user + ", vừa mới: " + btnthem.Text;
+                lbtaikhoan.Text = DangNhap.user;
+                DateTime time = DateTime.Now;
+                lbTime.Text = time.ToString("dd/MM/yyyy, HH:mm:ss");
+
+
+                CHECKLOG log = new CHECKLOG();
+
+                log.Ngay = lbTime.Text.Trim();
+                log.Noidung = lbContent.Text.Trim();
+
+                db.CHECKLOG.Add(log);
+                db.SaveChanges();
+            }
+
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -71,12 +107,52 @@ namespace QuanLyNhanSu
                 }
             }
             Quanlyduan_Load(sender, e);
+
+
+            if (DangNhap.capquyen == true)
+            {
+
+                lbContent.Text = "Người dùng: " + DangNhap.user + ", vừa mới: " + btnSua.Text;
+                lbtaikhoan.Text = DangNhap.user;
+                DateTime time = DateTime.Now;
+                lbTime.Text = time.ToString("dd/MM/yyyy, HH:mm:ss");
+
+
+                CHECKLOG log = new CHECKLOG();
+
+                log.Ngay = lbTime.Text.Trim();
+                log.Noidung = lbContent.Text.Trim();
+
+                db.CHECKLOG.Add(log);
+                db.SaveChanges();
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
             dab.deleteDA(txtMaDA.Text);
             Quanlyduan_Load(sender, e);
+
+
+            if (DangNhap.capquyen == true)
+            {
+
+                lbContent.Text = "Người dùng: " + DangNhap.user + ", vừa mới: " + btnXoa.Text;
+                lbtaikhoan.Text = DangNhap.user;
+                DateTime time = DateTime.Now;
+                lbTime.Text = time.ToString("dd/MM/yyyy, HH:mm:ss");
+
+
+                CHECKLOG log = new CHECKLOG();
+
+                log.Ngay = lbTime.Text.Trim();
+                log.Noidung = lbContent.Text.Trim();
+
+                db.CHECKLOG.Add(log);
+                db.SaveChanges();
+
+            }
+
         }
 
         private void Quanlyduan_Load(object sender, EventArgs e)
@@ -95,5 +171,10 @@ namespace QuanLyNhanSu
                 txtMotaDA.Text = dgvDuAn.Rows[index].Cells[3].Value.ToString();
             }
         }
-    }
+
+		private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+	}
 }
