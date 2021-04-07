@@ -109,7 +109,7 @@
 			// btnXoa
 			// 
 			this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.btnXoa.Image = global::QLNS.Properties.Resources.iconfinder_Remove_278742;
+			this.btnXoa.Image = global::QuanLyNhanSu.Properties.Resources.iconfinder_Remove_278742;
 			this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnXoa.Location = new System.Drawing.Point(447, 197);
 			this.btnXoa.Name = "btnXoa";
@@ -123,7 +123,7 @@
 			// btnSua
 			// 
 			this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.btnSua.Image = global::QLNS.Properties.Resources.iconfinder_Save_278762;
+			this.btnSua.Image = global::QuanLyNhanSu.Properties.Resources.iconfinder_Save_278762;
 			this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnSua.Location = new System.Drawing.Point(376, 199);
 			this.btnSua.Name = "btnSua";
@@ -137,7 +137,7 @@
 			// btnthem
 			// 
 			this.btnthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.btnthem.Image = global::QLNS.Properties.Resources.iconfinder_Stock_Index_Up_278812;
+			this.btnthem.Image = global::QuanLyNhanSu.Properties.Resources.iconfinder_Stock_Index_Up_278812;
 			this.btnthem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnthem.Location = new System.Drawing.Point(305, 199);
 			this.btnthem.Name = "btnthem";
@@ -151,7 +151,7 @@
 			// btnSearch
 			// 
 			this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.btnSearch.Image = global::QLNS.Properties.Resources.iconfinder_Zoom_In_278882;
+			this.btnSearch.Image = global::QuanLyNhanSu.Properties.Resources.iconfinder_Zoom_In_278882;
 			this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnSearch.Location = new System.Drawing.Point(68, 197);
 			this.btnSearch.Name = "btnSearch";
@@ -314,7 +314,7 @@
 			// button1
 			// 
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.button1.Image = global::QLNS.Properties.Resources.iconfinder_Undo_278852;
+			this.button1.Image = global::QuanLyNhanSu.Properties.Resources.iconfinder_Undo_278852;
 			this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.button1.Location = new System.Drawing.Point(0, 0);
 			this.button1.Name = "button1";

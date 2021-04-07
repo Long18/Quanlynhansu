@@ -65,12 +65,12 @@
 			this.id_Pb = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.id_Da = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.panel4 = new System.Windows.Forms.Panel();
-			this.qLNS = new QLNS.QLNS();
+			this.qLNS = new QuanLyNhanSu.QLNS();
 			this.pHONGBANBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.pHONGBANTableAdapter = new QLNS.QLNSTableAdapters.PHONGBANTableAdapter();
-			this.tableAdapterManager = new QLNS.QLNSTableAdapters.TableAdapterManager();
+			this.pHONGBANTableAdapter = new QuanLyNhanSu.QLNSTableAdapters.PHONGBANTableAdapter();
+			this.tableAdapterManager = new QuanLyNhanSu.QLNSTableAdapters.TableAdapterManager();
 			this.dUANBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.dUANTableAdapter = new QLNS.QLNSTableAdapters.DUANTableAdapter();
+			this.dUANTableAdapter = new QuanLyNhanSu.QLNSTableAdapters.DUANTableAdapter();
 			this.idDaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.nameDaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.sonvDaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -117,7 +117,7 @@
 			// btnExit
 			// 
 			this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.btnExit.Image = global::QLNS.Properties.Resources.iconfinder_Undo_278852;
+			this.btnExit.Image = global::QuanLyNhanSu.Properties.Resources.iconfinder_Undo_278852;
 			this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnExit.Location = new System.Drawing.Point(0, 0);
 			this.btnExit.Name = "btnExit";
@@ -161,7 +161,7 @@
 			// btnExportExcel
 			// 
 			this.btnExportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.btnExportExcel.Image = global::QLNS.Properties.Resources.Logoexe;
+			this.btnExportExcel.Image = global::QuanLyNhanSu.Properties.Resources.Logoexe;
 			this.btnExportExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnExportExcel.Location = new System.Drawing.Point(440, 202);
 			this.btnExportExcel.Name = "btnExportExcel";
@@ -175,7 +175,7 @@
 			// btnreset
 			// 
 			this.btnreset.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.btnreset.Image = global::QLNS.Properties.Resources.iconfinder_Synchronize_278832;
+			this.btnreset.Image = global::QuanLyNhanSu.Properties.Resources.iconfinder_Synchronize_278832;
 			this.btnreset.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnreset.Location = new System.Drawing.Point(59, 202);
 			this.btnreset.Name = "btnreset";
@@ -258,7 +258,7 @@
 			// btnXoa
 			// 
 			this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.btnXoa.Image = global::QLNS.Properties.Resources.iconfinder_Remove_278742;
+			this.btnXoa.Image = global::QuanLyNhanSu.Properties.Resources.iconfinder_Remove_278742;
 			this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnXoa.Location = new System.Drawing.Point(346, 202);
 			this.btnXoa.Name = "btnXoa";
@@ -272,7 +272,7 @@
 			// btnSua
 			// 
 			this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.btnSua.Image = global::QLNS.Properties.Resources.iconfinder_Save_278762;
+			this.btnSua.Image = global::QuanLyNhanSu.Properties.Resources.iconfinder_Save_278762;
 			this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnSua.Location = new System.Drawing.Point(256, 202);
 			this.btnSua.Name = "btnSua";
@@ -286,7 +286,7 @@
 			// btnThem
 			// 
 			this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.btnThem.Image = global::QLNS.Properties.Resources.iconfinder_Stock_Index_Up_278812;
+			this.btnThem.Image = global::QuanLyNhanSu.Properties.Resources.iconfinder_Stock_Index_Up_278812;
 			this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnThem.Location = new System.Drawing.Point(158, 202);
 			this.btnThem.Name = "btnThem";
@@ -300,7 +300,7 @@
 			// btnTim
 			// 
 			this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.btnTim.Image = global::QLNS.Properties.Resources.iconfinder_Zoom_In_278882;
+			this.btnTim.Image = global::QuanLyNhanSu.Properties.Resources.iconfinder_Zoom_In_278882;
 			this.btnTim.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnTim.Location = new System.Drawing.Point(35, 153);
 			this.btnTim.Name = "btnTim";
@@ -512,7 +512,7 @@
 			this.tableAdapterManager.DUANTableAdapter = this.dUANTableAdapter;
 			this.tableAdapterManager.NHANVIENTableAdapter = null;
 			this.tableAdapterManager.PHONGBANTableAdapter = this.pHONGBANTableAdapter;
-			this.tableAdapterManager.UpdateOrder = QLNS.QLNSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+			this.tableAdapterManager.UpdateOrder = QuanLyNhanSu.QLNSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
 			// 
 			// dUANBindingSource
 			// 
@@ -612,11 +612,11 @@
         private System.Windows.Forms.Label lblTieude;
         private System.Windows.Forms.Button btnreset;
         private System.Windows.Forms.Button btnExportExcel;
-		private QLNS qLNS;
+		private QuanLyNhanSu.QLNS qLNS;
 		private System.Windows.Forms.BindingSource pHONGBANBindingSource;
-		private QLNSTableAdapters.PHONGBANTableAdapter pHONGBANTableAdapter;
-		private QLNSTableAdapters.TableAdapterManager tableAdapterManager;
-		private QLNSTableAdapters.DUANTableAdapter dUANTableAdapter;
+		private QuanLyNhanSu.QLNSTableAdapters.PHONGBANTableAdapter pHONGBANTableAdapter;
+		private QuanLyNhanSu.QLNSTableAdapters.TableAdapterManager tableAdapterManager;
+		private QuanLyNhanSu.QLNSTableAdapters.DUANTableAdapter dUANTableAdapter;
 		private System.Windows.Forms.BindingSource dUANBindingSource;
 		private System.Windows.Forms.DataGridViewTextBoxColumn idDaDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn nameDaDataGridViewTextBoxColumn;
