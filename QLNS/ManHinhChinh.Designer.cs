@@ -1,4 +1,4 @@
-﻿namespace QLNS
+﻿namespace QuanLyNhanSu
 {
     partial class ManHinhChinh
     {
@@ -34,6 +34,7 @@
 			this.btnDuan = new System.Windows.Forms.Button();
 			this.btnExit = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
+			this.button1 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// btnNhanVien
@@ -63,7 +64,7 @@
 			// btnDuan
 			// 
 			this.btnDuan.ForeColor = System.Drawing.Color.Red;
-			this.btnDuan.Location = new System.Drawing.Point(62, 306);
+			this.btnDuan.Location = new System.Drawing.Point(280, 232);
 			this.btnDuan.Name = "btnDuan";
 			this.btnDuan.Size = new System.Drawing.Size(212, 56);
 			this.btnDuan.TabIndex = 2;
@@ -96,12 +97,25 @@
 			this.label1.TabIndex = 6;
 			this.label1.Text = "Phần Mềm Quản Lý Nhân Sự";
 			// 
+			// button1
+			// 
+			this.button1.ForeColor = System.Drawing.Color.Red;
+			this.button1.Location = new System.Drawing.Point(280, 163);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(212, 56);
+			this.button1.TabIndex = 7;
+			this.button1.Text = "Quản lý";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Visible = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
 			// ManHinhChinh
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.ClientSize = new System.Drawing.Size(760, 484);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.btnExit);
 			this.Controls.Add(this.btnDuan);
@@ -125,5 +139,6 @@
         private System.Windows.Forms.Button btnDuan;
         private System.Windows.Forms.Button btnExit;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button button1;
 	}
 }

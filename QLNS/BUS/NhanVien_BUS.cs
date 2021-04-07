@@ -5,8 +5,8 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using QLNS.DAL;
-namespace QLNS.BUS
+using QuanLyNhanSu.DAL;
+namespace QuanLyNhanSu.BUS
 {
     class NhanVien_BUS
     {

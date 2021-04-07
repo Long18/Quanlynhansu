@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using QLNS.DAL;
-using QLNS.DTO;
-namespace QLNS.BUS
+using QuanLyNhanSu.DAL;
+using QuanLyNhanSu.DTO;
+namespace QuanLyNhanSu.BUS
 {
     class User_BUS
     {

@@ -6,8 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using QLNS.BUS;
-namespace QLNS
+using QuanLyNhanSu.BUS;
+namespace QuanLyNhanSu
 {
     public partial class Quanlyduan : Form
     {
@@ -54,7 +54,7 @@ namespace QLNS
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            int sonv = 0;
+            
             if (txtMaDA.Text.Trim() == "")
                 MessageBox.Show("Mã dự án không được để trống !");
             else if (txtTenDA.Text.Trim() == "")

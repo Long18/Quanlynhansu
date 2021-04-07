@@ -49,13 +49,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +75,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivityLog.Designer.cs">
+      <DependentUpon>ActivityLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\DangNhap_BUS.cs" />
+    <Compile Include="BUS\Log_BUS.cs" />
     <Compile Include="BUS\User_BUS.cs" />
     <Compile Include="BUS\PhongBan_BUS.cs" />
     <Compile Include="BUS\NhanVien_BUS.cs" />
@@ -105,6 +122,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLNS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyad.Designer.cs">
+      <DependentUpon>QuanLyad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Quanlyduan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +146,9 @@
     <Compile Include="Quanlyphongban.Designer.cs">
       <DependentUpon>Quanlyphongban.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ActivityLog.resx">
+      <DependentUpon>ActivityLog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +162,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyad.resx">
+      <DependentUpon>QuanLyad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Quanlyduan.resx">
       <DependentUpon>Quanlyduan.cs</DependentUpon>
@@ -235,6 +264,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entity\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
-namespace QLNS.DAL
+namespace QuanLyNhanSu.DAL
 {
     public class Data
     {

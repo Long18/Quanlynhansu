@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using QLNS.BUS;
+using QuanLyNhanSu.BUS;
 using System.Data.SqlClient;
 using Microsoft.Office.Interop.Excel;
 using app = Microsoft.Office.Interop.Excel.Application;
-namespace QLNS
+namespace QuanLyNhanSu
 {
     public partial class Quanlynhanvien : Form
     {

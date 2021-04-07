@@ -6,8 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using QLNS.BUS;
-namespace QLNS
+using QuanLyNhanSu.BUS;
+namespace QuanLyNhanSu
 {
     public partial class Quanlyphongban : Form
     {

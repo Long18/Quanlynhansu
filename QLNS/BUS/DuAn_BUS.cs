@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using QLNS.DAL;
+using QuanLyNhanSu.DAL;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace QLNS.BUS
+namespace QuanLyNhanSu.BUS
 {
     class DuAn_BUS
     {
@@ -35,7 +35,8 @@ namespace QLNS.BUS
         }
         public void updateDA(String maDA, String tenDA, int sonv, String mota)
         {
-            String sql = "UPDATE DUAN set name_DA=N'" + tenDA + "',sonv_DA='" + sonv + "',mota_DA=N'" + mota + "' where id_DA='" + maDA + "'";
+            String sql = "UPDATE DUAN set name_DA=N'" + tenDA + "',sonv_DA='" + sonv + "',mota_DA=N'" +
+                mota + "' where id_DA='" + maDA + "'";
             try
             {
                 dt.ExcuteNonQuery(sql);

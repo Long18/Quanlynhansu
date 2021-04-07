@@ -1,4 +1,4 @@
-﻿namespace QLNS
+﻿namespace QuanLyNhanSu
 {
     partial class DangNhap
     {
@@ -36,6 +36,9 @@
 			this.txtUsername = new System.Windows.Forms.TextBox();
 			this.txtPassword = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
+			this.lbTime = new System.Windows.Forms.Label();
+			this.lbtaikhoan = new System.Windows.Forms.Label();
+			this.lbContent = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// btnDangnhap
@@ -113,6 +116,33 @@
 			this.label3.TabIndex = 0;
 			this.label3.Text = "Đăng nhập";
 			// 
+			// lbTime
+			// 
+			this.lbTime.AutoSize = true;
+			this.lbTime.Location = new System.Drawing.Point(328, 310);
+			this.lbTime.Name = "lbTime";
+			this.lbTime.Size = new System.Drawing.Size(0, 20);
+			this.lbTime.TabIndex = 7;
+			this.lbTime.Visible = false;
+			// 
+			// lbtaikhoan
+			// 
+			this.lbtaikhoan.AutoSize = true;
+			this.lbtaikhoan.Location = new System.Drawing.Point(361, 83);
+			this.lbtaikhoan.Name = "lbtaikhoan";
+			this.lbtaikhoan.Size = new System.Drawing.Size(0, 20);
+			this.lbtaikhoan.TabIndex = 8;
+			this.lbtaikhoan.Visible = false;
+			// 
+			// lbContent
+			// 
+			this.lbContent.AutoSize = true;
+			this.lbContent.Location = new System.Drawing.Point(384, 223);
+			this.lbContent.Name = "lbContent";
+			this.lbContent.Size = new System.Drawing.Size(0, 20);
+			this.lbContent.TabIndex = 9;
+			this.lbContent.Visible = false;
+			// 
 			// DangNhap
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -120,6 +150,9 @@
 			this.AutoSize = true;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.ClientSize = new System.Drawing.Size(434, 361);
+			this.Controls.Add(this.lbContent);
+			this.Controls.Add(this.lbtaikhoan);
+			this.Controls.Add(this.lbTime);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.txtPassword);
 			this.Controls.Add(this.txtUsername);
@@ -147,6 +180,9 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label3;
-    }
+		private System.Windows.Forms.Label lbTime;
+		private System.Windows.Forms.Label lbtaikhoan;
+		private System.Windows.Forms.Label lbContent;
+	}
 }
 

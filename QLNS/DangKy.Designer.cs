@@ -1,4 +1,4 @@
-﻿namespace QLNS
+﻿namespace QuanLyNhanSu
 {
     partial class DangKy
     {
@@ -147,7 +147,7 @@
 			this.txtMatkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
 			this.txtMatkhau.Location = new System.Drawing.Point(189, 171);
 			this.txtMatkhau.Name = "txtMatkhau";
-			this.txtMatkhau.PasswordChar = 'c';
+			this.txtMatkhau.PasswordChar = '*';
 			this.txtMatkhau.Size = new System.Drawing.Size(171, 26);
 			this.txtMatkhau.TabIndex = 6;
 			// 
@@ -156,7 +156,7 @@
 			this.txtNhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
 			this.txtNhaplai.Location = new System.Drawing.Point(189, 219);
 			this.txtNhaplai.Name = "txtNhaplai";
-			this.txtNhaplai.PasswordChar = 'c';
+			this.txtNhaplai.PasswordChar = '*';
 			this.txtNhaplai.Size = new System.Drawing.Size(171, 26);
 			this.txtNhaplai.TabIndex = 8;
 			// 

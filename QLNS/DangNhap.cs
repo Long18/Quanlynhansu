@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.Entity;
 
-using QLNS.BUS;
-namespace QLNS
+using QuanLyNhanSu.BUS;
+
+namespace QuanLyNhanSu
 {
     public partial class DangNhap : Form
     {
         public static bool phanquyen = false;
+
+
         public DangNhap()
         {
             InitializeComponent();
@@ -97,6 +101,22 @@ namespace QLNS
             {
                 MessageBox.Show("Lỗi kết nối CSDL !");
             }
+
+            lbContent.Text = "Người dùng:" + txtUsername.Text + ",vừa mới:" + btnDangnhap.Text  ;
+            lbtaikhoan.Text = txtUsername.Text;
+            DateTime time = DateTime.Now;
+            lbTime.Text = time.ToString("dd/MM/yyyy");
+
+            
+           /* Log log = new Log();*/
+
+            //log.Date = lbTime.Text.Trim();
+            //log.Content = lbContent.Text.Trim();
+
+            
+            /*db.SaveChanges();*/
+
+
         }
 
         private void btnDangky_Click(object sender, EventArgs e)

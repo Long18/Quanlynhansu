@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace QLNS.DTO
+namespace QuanLyNhanSu.DTO
 {
     public class PhongBan_DTO
     {

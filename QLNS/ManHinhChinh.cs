@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace QLNS
+namespace QuanLyNhanSu
 {
     public partial class ManHinhChinh : Form
     {
@@ -18,6 +18,7 @@ namespace QLNS
             {
                 btnNhanVien.Enabled = true;
                 btnPhongBan.Enabled = true;
+                button1.Visible = true;
             }
         }
         private void frm_Closed(object sender, FormClosedEventArgs e)
@@ -51,5 +52,12 @@ namespace QLNS
             frmdn.Show();
             this.Hide();
         }
-    }
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+            QuanLyad quanLy = new QuanLyad();
+            quanLy.Show();
+            this.Hide();
+		}
+	}
 }

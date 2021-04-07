@@ -1,4 +1,4 @@
-﻿namespace QLNS
+﻿namespace QuanLyNhanSu
 {
     partial class Quanlynhanvien
     {
