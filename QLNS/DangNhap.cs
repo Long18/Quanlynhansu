@@ -52,6 +52,8 @@ namespace QuanLyNhanSu
         {
             String condition, id,lichsu , taikhoan, matkhau;
 
+            
+
             StringBuilder s = new StringBuilder(txtPassword.Text);
             string key = "daylachuoimahoa";
             vegeMahoa(ref s, key);
@@ -110,7 +112,7 @@ namespace QuanLyNhanSu
 
             lbContent.Text = "Người dùng: " + txtUsername.Text + ", vừa mới: " + btnDangnhap.Text  ;
             lbtaikhoan.Text = txtUsername.Text;
-            lbtaikhoan.Text = user;
+            user = lbtaikhoan.Text;
             DateTime time = DateTime.Now;
             lbTime.Text = time.ToString("dd/MM/yyyy, HH:mm:ss");
 
