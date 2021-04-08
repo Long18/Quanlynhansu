@@ -5,10 +5,10 @@ using System.Linq;
 
 namespace QuanLyNhanSu.Entity
 {
-	public partial class Modellll : DbContext
+	public partial class ModelQLNS : DbContext
 	{
-		public Modellll()
-			: base("name=Modellll1")
+		public ModelQLNS()
+			: base("name=ModelQLNS")
 		{
 		}
 
@@ -23,10 +23,6 @@ namespace QuanLyNhanSu.Entity
 		{
 			modelBuilder.Entity<DANGNHAP>()
 				.Property(e => e.username)
-				.IsFixedLength();
-
-			modelBuilder.Entity<DANGNHAP>()
-				.Property(e => e.password)
 				.IsFixedLength();
 
 			modelBuilder.Entity<DANGNHAP>()

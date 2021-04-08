@@ -18,7 +18,7 @@ namespace QuanLyNhanSu
             InitializeComponent();
         }
         DuAn_BUS dab = new DuAn_BUS();
-        Modellll db = new Modellll();
+        ModelQLNS db = new ModelQLNS();
         private void btnExit_Click(object sender, EventArgs e)
         {
             ManHinhChinh frmmch = new ManHinhChinh();

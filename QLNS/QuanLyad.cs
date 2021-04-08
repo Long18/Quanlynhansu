@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 
@@ -22,7 +23,7 @@ namespace QuanLyNhanSu
 			}*/
 		}
 
-		Modellll db = new Modellll();
+		ModelQLNS db = new ModelQLNS();
 		public static bool checklog = false;
 
 		DangNhap_BUS dab = new DangNhap_BUS();
@@ -72,6 +73,24 @@ namespace QuanLyNhanSu
 			string key = "daylachuoimahoa";
 			vegeMahoa(ref s, key);
 			txtmatkhau.Text = Convert.ToString(s);
+
+
+			byte[] temp = ASCIIEncoding.ASCII.GetBytes(txtmatkhau.Text);
+
+			byte[] hashData = new MD5CryptoServiceProvider().ComputeHash(temp);
+
+			String hashPass = "!@#*H3LL0WOLD*#@!";
+
+			foreach (byte item in hashData)
+			{
+				hashPass += item;
+			}
+
+			txtmatkhau.Text = hashPass;
+
+
+
+
 
 			try
 			{
@@ -128,10 +147,10 @@ namespace QuanLyNhanSu
 			if (index >= 0)
 			{
 				txtuser.Text = dgvLogin.Rows[index].Cells[0].Value.ToString();
-				txtmatkhau.Text = dgvLogin.Rows[index].Cells[1].Value.ToString();
-				txtSoNV.Text = dgvLogin.Rows[index].Cells[2].Value.ToString();
-				txtchucvu.Text = dgvLogin.Rows[index].Cells[3].Value.ToString();
-				if (dgvLogin.Rows[index].Cells[4].Value.ToString() == "bat")
+				txtchucvu.Text = dgvLogin.Rows[index].Cells[2].Value.ToString();
+				txtSoNV.Text = dgvLogin.Rows[index].Cells[1].Value.ToString();
+				txtmatkhau.Text = dgvLogin.Rows[index].Cells[4].Value.ToString();
+				if (dgvLogin.Rows[index].Cells[3].Value.ToString() == "bat")
 				{
 					ckbYes.Checked = true;
 					ckbNo.Checked = false;

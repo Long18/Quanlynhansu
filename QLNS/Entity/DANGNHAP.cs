@@ -14,10 +14,6 @@ namespace QuanLyNhanSu.Entity
         public string username { get; set; }
 
         [Required]
-        [StringLength(20)]
-        public string password { get; set; }
-
-        [Required]
         [StringLength(10)]
         public string id_Nv { get; set; }
 
@@ -26,6 +22,8 @@ namespace QuanLyNhanSu.Entity
 
         [StringLength(50)]
         public string LichSu { get; set; }
+
+        public string password { get; set; }
 
         public virtual NHANVIEN NHANVIEN { get; set; }
     }

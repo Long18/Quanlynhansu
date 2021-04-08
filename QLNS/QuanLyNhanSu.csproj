@@ -107,7 +107,7 @@
     <Compile Include="Entity\CHECKLOG.cs" />
     <Compile Include="Entity\DANGNHAP.cs" />
     <Compile Include="Entity\DUAN.cs" />
-    <Compile Include="Entity\Modellll.cs" />
+    <Compile Include="Entity\ModelQLNS.cs" />
     <Compile Include="Entity\NHANVIEN.cs" />
     <Compile Include="Entity\PHONGBAN.cs" />
     <Compile Include="Entity\sysdiagrams.cs" />

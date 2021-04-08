@@ -11,6 +11,7 @@ using System.Data.Entity;
 
 using QuanLyNhanSu.BUS;
 using QuanLyNhanSu.Entity;
+using System.Security.Cryptography;
 
 namespace QuanLyNhanSu
 {
@@ -19,7 +20,7 @@ namespace QuanLyNhanSu
         public static bool phanquyen, capquyen = false;
         public static String user = "";
 
-        Modellll db = new Modellll();
+        ModelQLNS db = new ModelQLNS();
         public DangNhap()
         {
             InitializeComponent();
@@ -58,6 +59,22 @@ namespace QuanLyNhanSu
             string key = "daylachuoimahoa";
             vegeMahoa(ref s, key);
             txtPassword.Text = Convert.ToString(s);
+
+
+
+            byte[] temp = ASCIIEncoding.ASCII.GetBytes(txtPassword.Text);
+
+            byte[] hashData = new MD5CryptoServiceProvider().ComputeHash(temp);
+
+            String hashPass = "!@#*H3LL0WOLD*#@!";
+
+            foreach (byte item in hashData)
+            {
+                hashPass += item;
+            }
+
+            txtPassword.Text = hashPass;
+
             taikhoan = txtUsername.Text;
             matkhau = txtPassword.Text;
 
@@ -75,10 +92,16 @@ namespace QuanLyNhanSu
                 dt2 = ub.lichsu(lichsu);
                 dt1 = ub.phanquyen(id);
                 dt = ub.getUser(condition);
+
+                if(dt2.Rows.Count > 0)
+				{
+                    capquyen = true;
+				}
+
+
                 if (dt.Rows.Count > 0 && dt1.Rows.Count > 0 && dt2.Rows.Count > 0)
                 {
                     phanquyen = true;
-                    capquyen = true;
                     MessageBox.Show("Đăng nhập thành công !" + "\nAdmin Login!!");
                     ManHinhChinh frmmhc = new ManHinhChinh();
                     frmmhc.FormClosed += new FormClosedEventHandler(frmmhc_Closed);
@@ -87,7 +110,6 @@ namespace QuanLyNhanSu
                 }
                 else if (dt.Rows.Count > 0 && dt1.Rows.Count == 0){
                     phanquyen = false;
-                    capquyen = true;
                     MessageBox.Show("Đăng nhập thành công !");
                     ManHinhChinh frmmhc = new ManHinhChinh();
                     frmmhc.FormClosed += new FormClosedEventHandler(frmmhc_Closed);

@@ -12,7 +12,7 @@ namespace QuanLyNhanSu
 {
     public partial class ManHinhChinh : Form
     {
-        Modellll db = new Modellll();
+        ModelQLNS db = new ModelQLNS();
         public ManHinhChinh()
         {
             InitializeComponent();
@@ -135,5 +135,31 @@ namespace QuanLyNhanSu
             quanLy.Show();
             this.Hide();
 		}
+
+		private void ManHinhChinh_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void ManHinhChinh_FormClosing(object sender, FormClosingEventArgs e)
+		{
+            if (DangNhap.capquyen == true)
+            {
+
+                lbContent.Text = "Người dùng: " + DangNhap.user + ", vừa mới: " + "Đăng xuất";
+                lbtaikhoan.Text = DangNhap.user;
+                DateTime time = DateTime.Now;
+                lbTime.Text = time.ToString("dd/MM/yyyy, HH:mm:ss");
+
+
+                CHECKLOG log = new CHECKLOG();
+
+                log.Ngay = lbTime.Text.Trim();
+                log.Noidung = lbContent.Text.Trim();
+
+                db.CHECKLOG.Add(log);
+                db.SaveChanges();
+            }
+        }
 	}
 }

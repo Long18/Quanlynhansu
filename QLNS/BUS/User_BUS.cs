@@ -37,7 +37,7 @@ namespace QuanLyNhanSu.BUS
         }
 
 
-        public void insertUser(String username, String pass, String manv,String chucvu, String lichsu)
+        public void insertUser(String username, String manv,String chucvu, String lichsu, String pass)
         {
             String sql = "insert into DANGNHAP values('" + username + "','" + pass + "','" + manv + "','" + chucvu + "','" + lichsu + "')";
             da.ExcuteNonQuery(sql);

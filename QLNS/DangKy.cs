@@ -8,10 +8,14 @@ using System.Text;
 using System.Windows.Forms;
 using QuanLyNhanSu.BUS;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using QuanLyNhanSu.Entity;
+
 namespace QuanLyNhanSu
 {
     public partial class DangKy : Form
     {
+        ModelQLNS db = new ModelQLNS();
         public DangKy()
         {
             InitializeComponent();
@@ -41,12 +45,49 @@ namespace QuanLyNhanSu
             vegeMahoa(ref s1, key);
             txtMatkhau.Text = Convert.ToString(s);
             txtNhaplai.Text = Convert.ToString(s1);
+
+            byte[] temp = ASCIIEncoding.ASCII.GetBytes(txtMatkhau.Text);
+            byte[] temp1 = ASCIIEncoding.ASCII.GetBytes(txtNhaplai.Text);
+
+            byte[] hashData = new MD5CryptoServiceProvider().ComputeHash(temp);
+            byte[] hashData1 = new MD5CryptoServiceProvider().ComputeHash(temp1);
+
+            String hashPass = "!@#*H3LL0WOLD*#@!";
+            String hashPass1 = "!@#*H3LL0WOLD*#@!";
+
+            foreach (byte item in hashData)
+			{
+                hashPass += item;
+			}
+
+            foreach (byte item in hashData1)
+            {
+                hashPass1 += item;
+            }
+
+            txtMatkhau.Text = hashPass;
+            txtNhaplai.Text = hashPass1;
+
             try
             {
                 if (txtNhaplai.Text == txtMatkhau.Text)
                 {
                     String chucvu = "nhanvien";
-                    ub.insertUser(txtTaikhoan.Text, txtMatkhau.Text, txtMaNv.Text,chucvu,lichsuu);
+
+
+                    DANGNHAP nv = new DANGNHAP();
+                    nv.username = txtTaikhoan.Text.Trim();
+                    nv.password = txtMatkhau.Text.Trim();
+                    nv.id_Nv = txtMaNv.Text.Trim();
+                    nv.chucvu = chucvu;
+                    nv.LichSu = lichsuu;
+
+                    db.DANGNHAP.Add(nv);
+                    db.SaveChanges();
+                    
+
+
+
                     MessageBox.Show("Đăng ký tài khoản thành công !");
                     this.Close();
                 }
