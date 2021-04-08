@@ -52,8 +52,8 @@ namespace QuanLyNhanSu
             byte[] hashData = new MD5CryptoServiceProvider().ComputeHash(temp);
             byte[] hashData1 = new MD5CryptoServiceProvider().ComputeHash(temp1);
 
-            String hashPass = "!@#*H3LL0WOLD*#@!";
-            String hashPass1 = "!@#*H3LL0WOLD*#@!";
+            String hashPass = "!@#*Th4nHl0n9*#@!";
+            String hashPass1 = "!@#*Th4nHl0n9*#@!";
 
             foreach (byte item in hashData)
 			{

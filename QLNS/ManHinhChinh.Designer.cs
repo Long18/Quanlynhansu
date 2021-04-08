@@ -183,6 +183,7 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Màn Hình Chính";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManHinhChinh_FormClosing);
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ManHinhChinh_FormClosed);
 			this.Load += new System.EventHandler(this.ManHinhChinh_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();

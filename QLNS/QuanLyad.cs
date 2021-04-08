@@ -48,6 +48,8 @@ namespace QuanLyNhanSu
 			ManHinhChinh frmmch = new ManHinhChinh();
 			frmmch.Show();
 			this.Hide();
+			this.Close();
+			frmmch.Show();
 		}
 
 		private void QuanLy_Load(object sender, EventArgs e)
@@ -79,7 +81,7 @@ namespace QuanLyNhanSu
 
 			byte[] hashData = new MD5CryptoServiceProvider().ComputeHash(temp);
 
-			String hashPass = "!@#*H3LL0WOLD*#@!";
+			String hashPass = "!@#*Th4nHl0n9*#@!";
 
 			foreach (byte item in hashData)
 			{
