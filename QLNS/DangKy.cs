@@ -31,6 +31,7 @@ namespace QuanLyNhanSu
 
         private void btnDangky_Click(object sender, EventArgs e)
         {
+            String lichsuu = "bat";
             User_BUS ub = new User_BUS();
 
             StringBuilder s = new StringBuilder(txtMatkhau.Text);
@@ -45,7 +46,7 @@ namespace QuanLyNhanSu
                 if (txtNhaplai.Text == txtMatkhau.Text)
                 {
                     String chucvu = "nhanvien";
-                    ub.insertUser(txtTaikhoan.Text, txtMatkhau.Text, txtMaNv.Text,chucvu);
+                    ub.insertUser(txtTaikhoan.Text, txtMatkhau.Text, txtMaNv.Text,chucvu,lichsuu);
                     MessageBox.Show("Đăng ký tài khoản thành công !");
                     this.Close();
                 }

@@ -87,6 +87,7 @@ namespace QuanLyNhanSu
                 }
                 else if (dt.Rows.Count > 0 && dt1.Rows.Count == 0){
                     phanquyen = false;
+                    capquyen = true;
                     MessageBox.Show("Đăng nhập thành công !");
                     ManHinhChinh frmmhc = new ManHinhChinh();
                     frmmhc.FormClosed += new FormClosedEventHandler(frmmhc_Closed);
