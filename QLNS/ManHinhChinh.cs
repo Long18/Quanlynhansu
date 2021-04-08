@@ -32,6 +32,25 @@ namespace QuanLyNhanSu
             Quanlynhanvien frmnv = new Quanlynhanvien();
             frmnv.Show();
             this.Hide();
+
+
+            if (DangNhap.capquyen == true)
+            {
+                lbContent.Text = "Người dùng: " + DangNhap.user + ", vừa mới vào: " + btnNhanVien.Text;
+                lbtaikhoan.Text = DangNhap.user;
+                DateTime time = DateTime.Now;
+                lbTime.Text = time.ToString("dd/MM/yyyy, HH:mm:ss");
+
+
+                CHECKLOG log = new CHECKLOG();
+
+                log.Ngay = lbTime.Text.Trim();
+                log.Noidung = lbContent.Text.Trim();
+
+                db.CHECKLOG.Add(log);
+                db.SaveChanges();
+            }
+
         }
 
         private void btnPhongBan_Click(object sender, EventArgs e)
@@ -39,6 +58,24 @@ namespace QuanLyNhanSu
             Quanlyphongban frmpb = new Quanlyphongban();
             frmpb.Show();
             this.Hide();
+
+            if (DangNhap.capquyen == true)
+            {
+                lbContent.Text = "Người dùng: " + DangNhap.user + ", vừa mới vào: " + btnPhongBan.Text;
+                lbtaikhoan.Text = DangNhap.user;
+                DateTime time = DateTime.Now;
+                lbTime.Text = time.ToString("dd/MM/yyyy, HH:mm:ss");
+
+
+                CHECKLOG log = new CHECKLOG();
+
+                log.Ngay = lbTime.Text.Trim();
+                log.Noidung = lbContent.Text.Trim();
+
+                db.CHECKLOG.Add(log);
+                db.SaveChanges();
+            }
+
         }
 
         private void btnDuan_Click(object sender, EventArgs e)

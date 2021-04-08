@@ -42,19 +42,23 @@ namespace QuanLyNhanSu
         {
             dgvDuAn.DataSource=dab.Search(txtSearch.Text);
 
-            lbContent.Text = "Người dùng: " + DangNhap.user + ", vừa mới: " + btnSearch.Text;
-            lbtaikhoan.Text = DangNhap.user;
-            DateTime time = DateTime.Now;
-            lbTime.Text = time.ToString("dd/MM/yyyy, HH:mm:ss");
+            if (DangNhap.capquyen == true)
+            {
+
+                lbContent.Text = "Người dùng: " + DangNhap.user + ", vừa mới: " + btnSearch.Text;
+                lbtaikhoan.Text = DangNhap.user;
+                DateTime time = DateTime.Now;
+                lbTime.Text = time.ToString("dd/MM/yyyy, HH:mm:ss");
 
 
-            CHECKLOG log = new CHECKLOG();
+                CHECKLOG log = new CHECKLOG();
 
-            log.Ngay = lbTime.Text.Trim();
-            log.Noidung = lbContent.Text.Trim();
+                log.Ngay = lbTime.Text.Trim();
+                log.Noidung = lbContent.Text.Trim();
 
-            db.CHECKLOG.Add(log);
-            db.SaveChanges();
+                db.CHECKLOG.Add(log);
+                db.SaveChanges();
+            }
         }
 
         private void btnthem_Click(object sender, EventArgs e)
