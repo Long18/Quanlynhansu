@@ -87,6 +87,17 @@ namespace QuanLyNhanSu
             DataTable dt1 = new DataTable();
             DataTable dt2 = new DataTable();
 
+            lbContent.Text = "Người dùng: " + txtUsername.Text + ", vừa mới: " + btnDangnhap.Text;
+            lbtaikhoan.Text = txtUsername.Text;
+            user = lbtaikhoan.Text;
+            DateTime time = DateTime.Now;
+            lbTime.Text = time.ToString("dd/MM/yyyy, HH:mm:ss");
+
+
+            CHECKLOG log = new CHECKLOG();
+
+            
+
             try
             {
                 dt2 = ub.lichsu(lichsu);
@@ -107,6 +118,12 @@ namespace QuanLyNhanSu
                     frmmhc.FormClosed += new FormClosedEventHandler(frmmhc_Closed);
                     frmmhc.Show();
                     this.Hide();
+
+                    log.Ngay = lbTime.Text.Trim();
+                    log.Noidung = lbContent.Text.Trim();
+
+                    db.CHECKLOG.Add(log);
+                    db.SaveChanges();
                 }
                 else if (dt.Rows.Count > 0 && dt1.Rows.Count == 0){
                     phanquyen = false;
@@ -115,13 +132,16 @@ namespace QuanLyNhanSu
                     frmmhc.FormClosed += new FormClosedEventHandler(frmmhc_Closed);
                     frmmhc.Show();
                     this.Hide();
-                }else
+
+                    log.Ngay = lbTime.Text.Trim();
+                    log.Noidung = lbContent.Text.Trim();
+
+                    db.CHECKLOG.Add(log);
+                    db.SaveChanges();
+                }
+                else
                 {
-                    MessageBox.Show("Đăng nhập không thành công , mời bạn đăng ký !");
-                    DangKy frmdk = new DangKy();
-                    frmdk.FormClosed += new FormClosedEventHandler(frmdangky_Closed);
-                    frmdk.Show();
-                    this.Hide();
+                    MessageBox.Show("Đăng nhập không thành công. \nSai mật khẩu hoặc tài khoản không tồn tại!");
                 }
             }
             catch (FormatException)
@@ -133,20 +153,7 @@ namespace QuanLyNhanSu
                 MessageBox.Show("Lỗi kết nối CSDL !");
             }
 
-            lbContent.Text = "Người dùng: " + txtUsername.Text + ", vừa mới: " + btnDangnhap.Text  ;
-            lbtaikhoan.Text = txtUsername.Text;
-            user = lbtaikhoan.Text;
-            DateTime time = DateTime.Now;
-            lbTime.Text = time.ToString("dd/MM/yyyy, HH:mm:ss");
-
-
-			CHECKLOG log = new CHECKLOG();
-
-			log.Ngay = lbTime.Text.Trim();
-			log.Noidung = lbContent.Text.Trim();
-
-            db.CHECKLOG.Add(log);
-			db.SaveChanges();
+            
 
 
 		}
