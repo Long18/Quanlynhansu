@@ -83,7 +83,8 @@ namespace QuanLyNhanSu
                     nv.LichSu = lichsuu;
 
                     db.DANGNHAP.Add(nv);
-                    db.SaveChanges();
+                    +
+                        db.SaveChanges();
                     
 
 

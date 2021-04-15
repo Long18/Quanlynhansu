@@ -77,18 +77,21 @@ namespace QuanLyNhanSu
 			txtmatkhau.Text = Convert.ToString(s);
 
 
-			byte[] temp = ASCIIEncoding.ASCII.GetBytes(txtmatkhau.Text);
+			
+            byte[] temp = ASCIIEncoding.ASCII.GetBytes(txtmatkhau.Text);
 
-			byte[] hashData = new MD5CryptoServiceProvider().ComputeHash(temp);
+            byte[] hashData = new MD5CryptoServiceProvider().ComputeHash(temp);
 
-			String hashPass = "!@#*Th4nHl0n9*#@!";
+            String hashPass = "!@#*Th4nHl0n9*#@!";
 
-			foreach (byte item in hashData)
-			{
-				hashPass += item;
-			}
+            foreach (byte item in hashData)
+            {
+                hashPass += item;
+            }
 
-			txtmatkhau.Text = hashPass;
+            txtmatkhau.Text = hashPass;
+
+           
 
 
 
@@ -167,7 +170,15 @@ namespace QuanLyNhanSu
 
 		private void btnXoa_Click(object sender, EventArgs e)
 		{
-			dab.deleteTK(txtuser.Text);
+
+			if (txtchucvu.Text == "admin     " || txtuser.Text == "admin                                             ")
+			{
+				MessageBox.Show("Bạn không có quyền xoá \nTài khoản Admin!");
+			}
+			else
+			{
+				dab.deleteTK(txtuser.Text);
+			}
 			QuanLy_Load(sender, e);
 		}
 
